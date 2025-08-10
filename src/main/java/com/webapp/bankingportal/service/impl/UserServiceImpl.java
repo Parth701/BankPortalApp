@@ -22,10 +22,10 @@ import com.webapp.bankingportal.exception.InvalidTokenException;
 import com.webapp.bankingportal.exception.PasswordResetException;
 import com.webapp.bankingportal.exception.UnauthorizedException;
 import com.webapp.bankingportal.exception.UserInvalidException;
-import com.webapp.bankingportal.mapper.UserMapper;
+import com.webapp.bankingportal.converter.UserConverter;
 import com.webapp.bankingportal.repository.UserRepository;
 import com.webapp.bankingportal.util.JsonUtil;
-import com.webapp.bankingportal.util.LoggedinUser;
+import com.webapp.bankingportal.util.LoggedinUserUtil;
 import com.webapp.bankingportal.util.ValidationUtil;
 import com.webapp.bankingportal.constants.ApiMessages;
 
@@ -48,7 +48,7 @@ public class UserServiceImpl implements UserService {
     private final PasswordEncoder passwordEncoder;
     private final TokenService tokenService;
     private final UserDetailsService userDetailsService;
-    private final UserMapper userMapper;
+    private final UserConverter userConverter;
     private final UserRepository userRepository;
     private final ValidationUtil validationUtil;
 
@@ -88,7 +88,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public ResponseEntity<String> updateUser(User updatedUser) {
-        val accountNumber = LoggedinUser.getAccountNumber();
+        val accountNumber = LoggedinUserUtil.getAccountNumber();
         authenticateUser(accountNumber, updatedUser.getPassword());
         val existingUser = getUserByAccountNumber(accountNumber);
         updateUserDetails(existingUser, updatedUser);
@@ -214,7 +214,7 @@ public class UserServiceImpl implements UserService {
     private void updateUserDetails(User existingUser, User updatedUser) {
         ValidationUtil.validateUserDetails(updatedUser);
         updatedUser.setPassword(existingUser.getPassword());
-        userMapper.updateUser(updatedUser, existingUser);
+        userConverter.updateUser(updatedUser, existingUser);
     }
 
     private CompletableFuture<Boolean> sendLoginNotification(User user, String ip) {

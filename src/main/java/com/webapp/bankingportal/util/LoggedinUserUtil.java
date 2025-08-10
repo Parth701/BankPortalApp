@@ -7,7 +7,7 @@ import com.webapp.bankingportal.exception.NotFoundException;
 
 import lombok.val;
 
-public class LoggedinUser {
+public class LoggedinUserUtil {
 
     /**
      * Returns the account number of the currently logged in user. If there is

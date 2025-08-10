@@ -1,4 +1,4 @@
-package com.webapp.bankingportal.entity;
+package com.webapp.bankingportal.constants;
 
 public enum TransactionType {
     CASH_WITHDRAWAL,

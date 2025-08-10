@@ -27,14 +27,12 @@ public class Account {
     @NotEmpty
     @Column(unique = true)
     private String accountNumber;
-
     @NotEmpty
     private String accountType = "Savings";
-
     private String accountStatus;
     private double balance;
-    private String branch = "NIT";
-    private String ifscCode = "NIT001";
+    private String branch = "SDE";
+    private String ifscCode = "SDE701";
     private String Pin;
 
     @NotNull

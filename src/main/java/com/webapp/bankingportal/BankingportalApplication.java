@@ -6,7 +6,7 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.scheduling.annotation.EnableAsync;
 
 @SpringBootApplication
-@EnableCaching // Add this annotation to enable caching support
+@EnableCaching
 @EnableAsync
 public class BankingportalApplication {
 

@@ -1,9 +1,9 @@
-package com.webapp.bankingportal.model;
+package com.webapp.bankingportal.model.response;
 
 import java.util.Date;
 
 import com.webapp.bankingportal.entity.Transaction;
-import com.webapp.bankingportal.entity.TransactionType;
+import com.webapp.bankingportal.constants.TransactionType;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,7 +13,7 @@ import lombok.val;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class TransactionDTO {
+public class TransactionResponse {
 
     private Long id;
     private double amount;
@@ -22,7 +22,7 @@ public class TransactionDTO {
     private String sourceAccountNumber;
     private String targetAccountNumber;
 
-    public TransactionDTO(Transaction transaction) {
+    public TransactionResponse(Transaction transaction) {
         this.id = transaction.getId();
         this.amount = transaction.getAmount();
         this.transactionType = transaction.getTransactionType();

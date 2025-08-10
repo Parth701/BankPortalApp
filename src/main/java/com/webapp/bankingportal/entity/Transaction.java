@@ -2,6 +2,7 @@ package com.webapp.bankingportal.entity;
 
 import java.util.Date;
 
+import com.webapp.bankingportal.constants.TransactionType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;

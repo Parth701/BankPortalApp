@@ -2,10 +2,10 @@ package com.webapp.bankingportal.service;
 
 import java.util.List;
 
-import com.webapp.bankingportal.model.TransactionDTO;
+import com.webapp.bankingportal.model.response.TransactionResponse;
 
 public interface TransactionService {
 
-	List<TransactionDTO> getAllTransactionsByAccountNumber(String accountNumber);
+	List<TransactionResponse> getAllTransactionsByAccountNumber(String accountNumber);
 
 }

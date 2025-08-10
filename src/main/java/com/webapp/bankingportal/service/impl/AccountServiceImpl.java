@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.webapp.bankingportal.entity.Account;
 import com.webapp.bankingportal.entity.Transaction;
-import com.webapp.bankingportal.entity.TransactionType;
+import com.webapp.bankingportal.constants.TransactionType;
 import com.webapp.bankingportal.entity.User;
 import com.webapp.bankingportal.exception.FundTransferException;
 import com.webapp.bankingportal.exception.InsufficientBalanceException;
