@@ -27,6 +27,6 @@ spring.mail.password=x88p99qxzmdvgmdu
 spring.mail.properties.mail.smtp.auth=true
 spring.mail.properties.mail.smtp.starttls.enable=true
 
-# Geolocation API
+# Geolocation api
 geo.api.url=https://api.findip.net/
 geo.api.key=your-api-key
