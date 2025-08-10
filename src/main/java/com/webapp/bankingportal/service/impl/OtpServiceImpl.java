@@ -1,10 +1,12 @@
-package com.webapp.bankingportal.service;
+package com.webapp.bankingportal.service.impl;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.Random;
 import java.util.concurrent.CompletableFuture;
 
+import com.webapp.bankingportal.service.EmailService;
+import com.webapp.bankingportal.service.OtpService;
 import org.springframework.cache.CacheManager;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +16,7 @@ import com.webapp.bankingportal.exception.InvalidOtpException;
 import com.webapp.bankingportal.exception.OtpRetryLimitExceededException;
 import com.webapp.bankingportal.repository.OtpInfoRepository;
 import com.webapp.bankingportal.util.ValidationUtil;
-import com.webapp.bankingportal.util.ApiMessages;
+import com.webapp.bankingportal.constants.ApiMessages;
 
 import lombok.RequiredArgsConstructor;
 import lombok.val;

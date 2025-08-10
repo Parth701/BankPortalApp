@@ -1,19 +1,22 @@
-package com.webapp.bankingportal.service;
+package com.webapp.bankingportal.service.impl;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+import com.webapp.bankingportal.service.AuthService;
+import com.webapp.bankingportal.service.OtpService;
+import com.webapp.bankingportal.service.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.webapp.bankingportal.dto.OtpRequest;
-import com.webapp.bankingportal.dto.OtpVerificationRequest;
-import com.webapp.bankingportal.dto.ResetPasswordRequest;
+import com.webapp.bankingportal.model.request.OtpRequest;
+import com.webapp.bankingportal.model.request.OtpVerificationRequest;
+import com.webapp.bankingportal.model.request.ResetPasswordRequest;
 import com.webapp.bankingportal.entity.PasswordResetToken;
 import com.webapp.bankingportal.entity.User;
 import com.webapp.bankingportal.repository.PasswordResetTokenRepository;
-import com.webapp.bankingportal.util.ApiMessages;
+import com.webapp.bankingportal.constants.ApiMessages;
 
 import lombok.RequiredArgsConstructor;
 import lombok.val;

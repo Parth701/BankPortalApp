@@ -1,4 +1,4 @@
-package com.webapp.bankingportal.dto;
+package com.webapp.bankingportal.model.response;
 
 import com.webapp.bankingportal.entity.User;
 

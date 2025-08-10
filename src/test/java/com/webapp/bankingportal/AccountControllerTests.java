@@ -7,11 +7,11 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-import com.webapp.bankingportal.dto.AmountRequest;
-import com.webapp.bankingportal.dto.FundTransferRequest;
-import com.webapp.bankingportal.dto.PinRequest;
-import com.webapp.bankingportal.dto.PinUpdateRequest;
-import com.webapp.bankingportal.util.ApiMessages;
+import com.webapp.bankingportal.model.request.AmountRequest;
+import com.webapp.bankingportal.model.request.FundTransferRequest;
+import com.webapp.bankingportal.model.request.PinRequest;
+import com.webapp.bankingportal.model.request.PinUpdateRequest;
+import com.webapp.bankingportal.constants.ApiMessages;
 import com.webapp.bankingportal.util.JsonUtil;
 
 import lombok.val;

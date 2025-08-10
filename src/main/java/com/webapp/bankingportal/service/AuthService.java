@@ -2,9 +2,9 @@ package com.webapp.bankingportal.service;
 
 import org.springframework.http.ResponseEntity;
 
-import com.webapp.bankingportal.dto.OtpRequest;
-import com.webapp.bankingportal.dto.OtpVerificationRequest;
-import com.webapp.bankingportal.dto.ResetPasswordRequest;
+import com.webapp.bankingportal.model.request.OtpRequest;
+import com.webapp.bankingportal.model.request.OtpVerificationRequest;
+import com.webapp.bankingportal.model.request.ResetPasswordRequest;
 import com.webapp.bankingportal.entity.User;
 
 public interface AuthService {

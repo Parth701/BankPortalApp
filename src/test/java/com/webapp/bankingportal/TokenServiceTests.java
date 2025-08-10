@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.webapp.bankingportal.exception.InvalidTokenException;
 import com.webapp.bankingportal.repository.TokenRepository;
-import com.webapp.bankingportal.util.ApiMessages;
+import com.webapp.bankingportal.constants.ApiMessages;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

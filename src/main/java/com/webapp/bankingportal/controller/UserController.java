@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.webapp.bankingportal.dto.LoginRequest;
-import com.webapp.bankingportal.dto.OtpRequest;
-import com.webapp.bankingportal.dto.OtpVerificationRequest;
+import com.webapp.bankingportal.model.request.LoginRequest;
+import com.webapp.bankingportal.model.request.OtpRequest;
+import com.webapp.bankingportal.model.request.OtpVerificationRequest;
 import com.webapp.bankingportal.entity.User;
 import com.webapp.bankingportal.exception.InvalidTokenException;
 import com.webapp.bankingportal.service.UserService;

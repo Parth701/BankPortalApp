@@ -1,4 +1,4 @@
-package com.webapp.bankingportal.dto;
+package com.webapp.bankingportal.model;
 
 import java.util.Date;
 

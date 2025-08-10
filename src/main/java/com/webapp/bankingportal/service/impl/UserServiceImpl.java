@@ -1,8 +1,9 @@
-package com.webapp.bankingportal.service;
+package com.webapp.bankingportal.service.impl;
 
 import java.sql.Timestamp;
 import java.util.concurrent.CompletableFuture;
 
+import com.webapp.bankingportal.service.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -12,10 +13,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.webapp.bankingportal.dto.LoginRequest;
-import com.webapp.bankingportal.dto.OtpRequest;
-import com.webapp.bankingportal.dto.OtpVerificationRequest;
-import com.webapp.bankingportal.dto.UserResponse;
+import com.webapp.bankingportal.model.request.LoginRequest;
+import com.webapp.bankingportal.model.request.OtpRequest;
+import com.webapp.bankingportal.model.request.OtpVerificationRequest;
+import com.webapp.bankingportal.model.response.UserResponse;
 import com.webapp.bankingportal.entity.User;
 import com.webapp.bankingportal.exception.InvalidTokenException;
 import com.webapp.bankingportal.exception.PasswordResetException;
@@ -26,7 +27,7 @@ import com.webapp.bankingportal.repository.UserRepository;
 import com.webapp.bankingportal.util.JsonUtil;
 import com.webapp.bankingportal.util.LoggedinUser;
 import com.webapp.bankingportal.util.ValidationUtil;
-import com.webapp.bankingportal.util.ApiMessages;
+import com.webapp.bankingportal.constants.ApiMessages;
 
 import jakarta.servlet.http.HttpServletRequest;
 

@@ -23,14 +23,14 @@ import com.google.i18n.phonenumbers.NumberParseException;
 import com.google.i18n.phonenumbers.PhoneNumberUtil;
 import com.jayway.jsonpath.JsonPath;
 
-import com.webapp.bankingportal.dto.AmountRequest;
-import com.webapp.bankingportal.dto.LoginRequest;
-import com.webapp.bankingportal.dto.PinRequest;
+import com.webapp.bankingportal.model.request.AmountRequest;
+import com.webapp.bankingportal.model.request.LoginRequest;
+import com.webapp.bankingportal.model.request.PinRequest;
 import com.webapp.bankingportal.entity.User;
 import com.webapp.bankingportal.repository.UserRepository;
 import com.webapp.bankingportal.service.AccountService;
 import com.webapp.bankingportal.service.TokenService;
-import com.webapp.bankingportal.util.ApiMessages;
+import com.webapp.bankingportal.constants.ApiMessages;
 import com.webapp.bankingportal.util.JsonUtil;
 
 import jakarta.mail.MessagingException;

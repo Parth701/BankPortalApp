@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.webapp.bankingportal.dto.AmountRequest;
-import com.webapp.bankingportal.dto.FundTransferRequest;
-import com.webapp.bankingportal.dto.PinRequest;
-import com.webapp.bankingportal.dto.PinUpdateRequest;
+import com.webapp.bankingportal.model.request.AmountRequest;
+import com.webapp.bankingportal.model.request.FundTransferRequest;
+import com.webapp.bankingportal.model.request.PinRequest;
+import com.webapp.bankingportal.model.request.PinUpdateRequest;
 import com.webapp.bankingportal.service.AccountService;
 import com.webapp.bankingportal.service.TransactionService;
-import com.webapp.bankingportal.util.ApiMessages;
+import com.webapp.bankingportal.constants.ApiMessages;
 import com.webapp.bankingportal.util.JsonUtil;
 import com.webapp.bankingportal.util.LoggedinUser;
 

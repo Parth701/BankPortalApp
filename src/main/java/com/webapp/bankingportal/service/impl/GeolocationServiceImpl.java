@@ -1,16 +1,17 @@
-package com.webapp.bankingportal.service;
+package com.webapp.bankingportal.service.impl;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.concurrent.CompletableFuture;
 
+import com.webapp.bankingportal.service.GeolocationService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
-import com.webapp.bankingportal.dto.GeolocationResponse;
+import com.webapp.bankingportal.model.response.GeolocationResponse;
 import com.webapp.bankingportal.exception.GeolocationException;
 
 import lombok.val;

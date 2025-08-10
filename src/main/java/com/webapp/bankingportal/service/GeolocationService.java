@@ -4,7 +4,7 @@ import java.util.concurrent.CompletableFuture;
 
 import org.springframework.scheduling.annotation.Async;
 
-import com.webapp.bankingportal.dto.GeolocationResponse;
+import com.webapp.bankingportal.model.response.GeolocationResponse;
 
 public interface GeolocationService {
 

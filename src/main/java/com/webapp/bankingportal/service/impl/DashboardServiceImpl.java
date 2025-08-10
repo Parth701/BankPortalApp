@@ -1,13 +1,14 @@
-package com.webapp.bankingportal.service;
+package com.webapp.bankingportal.service.impl;
 
+import com.webapp.bankingportal.service.DashboardService;
 import org.springframework.stereotype.Service;
 
-import com.webapp.bankingportal.dto.AccountResponse;
-import com.webapp.bankingportal.dto.UserResponse;
+import com.webapp.bankingportal.model.response.AccountResponse;
+import com.webapp.bankingportal.model.response.UserResponse;
 import com.webapp.bankingportal.exception.NotFoundException;
 import com.webapp.bankingportal.repository.AccountRepository;
 import com.webapp.bankingportal.repository.UserRepository;
-import com.webapp.bankingportal.util.ApiMessages;
+import com.webapp.bankingportal.constants.ApiMessages;
 
 import lombok.RequiredArgsConstructor;
 import lombok.val;

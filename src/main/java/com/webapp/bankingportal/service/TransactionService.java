@@ -2,7 +2,7 @@ package com.webapp.bankingportal.service;
 
 import java.util.List;
 
-import com.webapp.bankingportal.dto.TransactionDTO;
+import com.webapp.bankingportal.model.TransactionDTO;
 
 public interface TransactionService {
 

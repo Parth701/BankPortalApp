@@ -11,12 +11,12 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import com.jayway.jsonpath.JsonPath;
 
-import com.webapp.bankingportal.dto.LoginRequest;
-import com.webapp.bankingportal.dto.OtpRequest;
-import com.webapp.bankingportal.dto.OtpVerificationRequest;
-import com.webapp.bankingportal.dto.PinRequest;
+import com.webapp.bankingportal.model.request.LoginRequest;
+import com.webapp.bankingportal.model.request.OtpRequest;
+import com.webapp.bankingportal.model.request.OtpVerificationRequest;
+import com.webapp.bankingportal.model.request.PinRequest;
 import com.webapp.bankingportal.service.TokenService;
-import com.webapp.bankingportal.util.ApiMessages;
+import com.webapp.bankingportal.constants.ApiMessages;
 import com.webapp.bankingportal.util.JsonUtil;
 
 import lombok.val;

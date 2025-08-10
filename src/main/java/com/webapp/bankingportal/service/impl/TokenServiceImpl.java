@@ -1,10 +1,11 @@
-package com.webapp.bankingportal.service;
+package com.webapp.bankingportal.service.impl;
 
 import static org.springframework.security.core.userdetails.User.withUsername;
 
 import java.util.Date;
 import java.util.function.Function;
 
+import com.webapp.bankingportal.service.TokenService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -16,7 +17,7 @@ import com.webapp.bankingportal.exception.InvalidTokenException;
 import com.webapp.bankingportal.repository.AccountRepository;
 import com.webapp.bankingportal.repository.TokenRepository;
 import com.webapp.bankingportal.repository.UserRepository;
-import com.webapp.bankingportal.util.ApiMessages;
+import com.webapp.bankingportal.constants.ApiMessages;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;

@@ -1,4 +1,4 @@
-package com.webapp.bankingportal.util;
+package com.webapp.bankingportal.constants;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

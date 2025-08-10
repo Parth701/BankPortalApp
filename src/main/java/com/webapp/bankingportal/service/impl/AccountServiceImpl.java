@@ -1,8 +1,9 @@
-package com.webapp.bankingportal.service;
+package com.webapp.bankingportal.service.impl;
 
 import java.util.Date;
 import java.util.UUID;
 
+import com.webapp.bankingportal.service.AccountService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +19,7 @@ import com.webapp.bankingportal.exception.NotFoundException;
 import com.webapp.bankingportal.exception.UnauthorizedException;
 import com.webapp.bankingportal.repository.AccountRepository;
 import com.webapp.bankingportal.repository.TransactionRepository;
-import com.webapp.bankingportal.util.ApiMessages;
+import com.webapp.bankingportal.constants.ApiMessages;
 
 import lombok.RequiredArgsConstructor;
 import lombok.val;
