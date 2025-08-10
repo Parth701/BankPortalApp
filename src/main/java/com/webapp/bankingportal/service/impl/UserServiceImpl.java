@@ -2,7 +2,7 @@ package com.webapp.bankingportal.service.impl;
 
 import java.sql.Timestamp;
 import java.util.concurrent.CompletableFuture;
-
+import com.webapp.bankingportal.mapper.UserMapper;
 import com.webapp.bankingportal.service.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -22,7 +22,6 @@ import com.webapp.bankingportal.exception.InvalidTokenException;
 import com.webapp.bankingportal.exception.PasswordResetException;
 import com.webapp.bankingportal.exception.UnauthorizedException;
 import com.webapp.bankingportal.exception.UserInvalidException;
-import com.webapp.bankingportal.converter.UserConverter;
 import com.webapp.bankingportal.repository.UserRepository;
 import com.webapp.bankingportal.util.JsonUtil;
 import com.webapp.bankingportal.util.LoggedinUserUtil;
@@ -48,7 +47,7 @@ public class UserServiceImpl implements UserService {
     private final PasswordEncoder passwordEncoder;
     private final TokenService tokenService;
     private final UserDetailsService userDetailsService;
-    private final UserConverter userConverter;
+    private final UserMapper userMapper;
     private final UserRepository userRepository;
     private final ValidationUtil validationUtil;
 
@@ -214,7 +213,7 @@ public class UserServiceImpl implements UserService {
     private void updateUserDetails(User existingUser, User updatedUser) {
         ValidationUtil.validateUserDetails(updatedUser);
         updatedUser.setPassword(existingUser.getPassword());
-        userConverter.updateUser(updatedUser, existingUser);
+        userMapper.updateUser(updatedUser, existingUser);
     }
 
     private CompletableFuture<Boolean> sendLoginNotification(User user, String ip) {

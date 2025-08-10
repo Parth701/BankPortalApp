@@ -1,4 +1,4 @@
-package com.webapp.bankingportal.converter;
+package com.webapp.bankingportal.mapper;
 
 import org.springframework.stereotype.Component;
 
